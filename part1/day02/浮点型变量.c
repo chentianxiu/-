@@ -5,6 +5,7 @@ int main(){
     short num2 = 20 ;
     long num3 = 30l ;
     double num4 = 13.14;
+    long long num5 = 10000ll;
     
     printf("float类型:%0.4f\n",num1);
     printf("num2: %hd\n",num2);

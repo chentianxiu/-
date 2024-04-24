@@ -6,12 +6,12 @@ enum Season{Spring,Summer,Autumn,Winter};
 
 
 int main(){
-    printf("ºê¶¨Òå³£Á¿%f\n",PI);//³£±äÁ¿
+    printf("å®å®šä¹‰å¸¸é‡%f\n",PI);//å¸¸å˜é‡
     const int a=20;
-    //a=10;»á³öbug£¬a²»¿ÉĞŞ¸Ä
-    printf("Ã¶¾Ù¼¾½Ú%d\n",Spring);
-    printf("Ã¶¾Ù¼¾½Ú%d\n",Summer);
-    printf("Ã¶¾Ù¼¾½Ú%d\n",Autumn);
-    printf("Ã¶¾Ù¼¾½Ú%d\n",Winter);
+    //a=10;ä¼šå‡ºbugï¼Œaä¸å¯ä¿®æ”¹
+    printf("æšä¸¾å­£èŠ‚%d\n",Spring);
+    printf("æšä¸¾å­£èŠ‚%d\n",Summer);
+    printf("æšä¸¾å­£èŠ‚%d\n",Autumn);
+    printf("æšä¸¾å­£èŠ‚%d\n",Winter);
     return 0;
 }
