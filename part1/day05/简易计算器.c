@@ -9,12 +9,18 @@ double div(double a,double b){return a/b;}
 
 int main()
 {
-    double num1,num2,result;
-    char operator,quit;
-    while (1)
+    //double num1 ,num2,result = 0;
+    //char operator,quit;
+    int flag = 1;
+    while (flag)
     {
+        double num1 =0;
+        double num2 = 0;
+        double result = 0;
+        char operator = ' ';
+        char quit = ' ';
         printf("请输入您的操作比如1+2\n");
-        scanf("%lf%c%lf",&num1,&operator,&num2);
+        scanf("%lf%c%lf",&num1,&operator,&num2);       
         switch (operator)
         {
         case '+':
@@ -37,12 +43,17 @@ int main()
             break;   
         default:
             printf("您输入的格式有问题\n");
+            while(getchar()!='\n');
             continue;
         }
         
         printf("结果是:%.2lf\n",result);
+
+        while(flag){
+
         printf("是否退出继续?(y/n):\n");
-        while(getchar()!='\n');
+
+        while(getchar()!='\n');//清除缓冲区多余字符
         /*while(getchar()!='\n') 这个语句在C语言中用于读取并丢弃从标准输入（通常是键盘）直到遇到换行符（'\n'）为止的所有字符。
         这里的 getchar() 函数从标准输入读取一个字符，并返回这个字符的ASCII值。然后，这个值（字符）与换行符（'\n'）进行比较。
         如果读取的字符不是换行符，getchar()!='\n' 的结果为 true，while 循环将继续执行。这意味着，getchar() 函数会再次被调用，
@@ -56,8 +67,20 @@ int main()
         那么循环可能会立即退出。但如果输入缓冲区中有其他字符（例如之前的输入操作遗留的），这些字符也会被读取并丢弃。*/
         scanf("%c",&quit);
         if(quit=='y'||quit=='Y'){
+            flag = 0;
             break;
-        }//while为无限循环，break才能打断进程
+        }else if (quit=='n'||quit=='N')
+        {
+            printf("程序继续\n");
+            break;
+        }else{
+            printf("请输入有效的字符y或者n\n");
+            continue;
+        }
+        //while为无限循环，break才能打断进程
+        }
+
+        while(getchar()!='\n');
 
     }
     

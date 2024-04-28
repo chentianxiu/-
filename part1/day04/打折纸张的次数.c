@@ -11,6 +11,7 @@ int main()
     }
     printf("需要折叠%d次\n",count);
 
-    return 0;
+    return 0 ;
+    
     
 }

@@ -13,6 +13,7 @@ struct Student
 int main()
 {
     //定义一个结构体变量并且初始化
+    //struct Student stu3 = {};
     struct Student stu1={ "张三",18,"男","s001"};
     struct Student stu2={ "李四",19,"女","s002"};
 
