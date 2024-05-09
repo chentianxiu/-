@@ -10,8 +10,14 @@ int main()
     int length = sizeof(arr)/sizeof(arr[0]);
     for(int i = 0;i<length;++i){
         int temp = *(ptr+i);
-        printf("%d\n",*(ptr+i));
+        printf("%d\n",temp);
     }
+
+    for(int i = 0;i<length;++i){
+        int temp = *ptr++;
+        printf("%d\n",temp);
+    }
+    printf("%d\n",*ptr);//ptr指针超过数组，成为野指针
 
 
     return 0;

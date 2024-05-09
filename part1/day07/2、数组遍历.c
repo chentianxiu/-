@@ -15,6 +15,9 @@ int main()
         }
         //printf("%d, ",arr1[i]);
     }
+
+
+    
     
     printf("]\n");//打印数组
     int add=0;

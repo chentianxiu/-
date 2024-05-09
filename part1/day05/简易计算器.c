@@ -17,10 +17,12 @@ int main()
         double num1 =0;
         double num2 = 0;
         double result = 0;
-        char operator = ' ';
-        char quit = ' ';
+        char operator = 0;
+        char quit = 0;
         printf("请输入您的操作比如1+2\n");
-        scanf("%lf%c%lf",&num1,&operator,&num2);       
+        scanf("%lf",&num1);
+        scanf("%c",&operator);
+        scanf("%lf",&num2);
         switch (operator)
         {
         case '+':

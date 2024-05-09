@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+//将数组元素左右呼唤
 int main()
 {
     int arr[]={1,2,3,4,5};
@@ -16,7 +16,7 @@ int main()
     //遍历数组
     for (int i = 0; i < length; i++)
     {
-        printf("%d\t",arr[i]);
+        printf("%d ",arr[i]);
     }
     
     
