@@ -18,7 +18,7 @@ int main()
     char ch;
     //逐个字符读取并且输出
     while((ch = fgetc(file))!=EOF){
-        printf("%c\n",ch);
+        printf("%c",ch);
     }
 
     //关闭文件

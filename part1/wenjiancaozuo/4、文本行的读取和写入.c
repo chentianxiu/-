@@ -4,7 +4,7 @@ int main()
 {
     FILE * file = NULL;
 
-    file = fopen("test.txt","w");
+    file = fopen("test.txt","r");
 
     if(file == NULL){
         printf("文件打开失败\n");
@@ -17,6 +17,14 @@ int main()
     //文本写入
 
     fputs(str,file);
+
+    char buffer[100];
+
+    while (fgets((buffer),sizeof(buffer),file) !=NULL)
+    {
+        printf("%s",buffer);
+    }
+    
 
     fclose(file);
 

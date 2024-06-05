@@ -28,11 +28,11 @@ Date inputDateValue(){
 }
 
 void output(Student student){
-    printf("学号:%d 姓名:%d 日期:%d-%d-%d\n",student.num,student.name,student.date.year,student.date.month,student.date.day);
+    printf("学号:%d 姓名:%s 日期:%d-%d-%d\n",student.num,student.name,student.date.year,student.date.month,student.date.day);
     printf("成绩:\n");
     for (int i = 0; i < 3; i++)
     {
-        printf("%.2f",student.score[i]);
+        printf("%.2f\t",student.score[i]);
     
     }
     printf("\n");
