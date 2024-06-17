@@ -22,6 +22,7 @@ int main()
 	int bytes = read( STDIN_FILENO,buf,127);
 
 	write(STDOUT_FILENO,buf,bytes);
+	
 	return 0;
 
 }

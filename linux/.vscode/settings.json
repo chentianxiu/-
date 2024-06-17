@@ -4,7 +4,9 @@
         "student.h": "c",
         "conio.h": "c",
         "userlottery.h": "c",
-        "currentid.h": "c"
+        "currentid.h": "c",
+        "signal.h": "c",
+        "stdlib.h": "c"
     },
     "C_Cpp.errorSquiggles": "enabled",
     "cmake.configureOnOpen": true
