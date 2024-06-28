@@ -15,7 +15,7 @@ void func1()
     while (1)
     {
         pthread_mutex_lock(&mutex1);//上锁
-        printf("线程1打印巨荐是傻叉\n");
+        printf("A\n");
         pthread_mutex_unlock(&mutex2);//解锁
         sleep(1);
     }
@@ -26,7 +26,7 @@ void func2()
     while (1)
     {
         pthread_mutex_lock(&mutex2);//上锁
-        printf("线程2打印江彬是傻叉\n");
+        printf("B\n");
         pthread_mutex_unlock(&mutex3);//解锁
         sleep(1);
         
@@ -39,7 +39,7 @@ void func3()
     while (1)
     {
         pthread_mutex_lock(&mutex3);//上锁
-        printf("线程3打印陈良是天才\n");
+        printf("C\n");
         pthread_mutex_unlock(&mutex1);//解锁
         sleep(1);
     }

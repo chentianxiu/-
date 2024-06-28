@@ -1,0 +1,87 @@
+/*
+UDP通信流程：
+发送方：
+1、创建套接字：	
+    int sockfd = socket(AF_INET,SOCK_DGRAM,0);
+2、准备接收方的地址：
+    struct sockaddr_in recvAddr;		
+3、给对方发送信息
+    sendto(sockfd,recvAddr);//在tcp的基础上加上地址和地址长度
+
+接收方：
+1、创建套接字：
+    int sockfd = socket(AF_INET,SOCK_DGRAM,0);
+2、准备自己的地址：
+    struct sockaddr_in localAddr;
+3、绑定套接字和地址：
+    bind(fd,localAddr);
+4、等待接收信息：
+    //接收端地址
+    struct sockaddr_in r_addr = {};
+    socklen_t addr_len = sizeof(r_addr);
+    recvfrom(fd,上面的接收端地址);
+
+
+UDP相关接口函数：
+1、建立套接字（socket）
+    #include<sys/types.h>
+    #include<sys/socket.h>
+
+    int socket(int domain,int type,int protocal);
+    domain：哪种地址协议（ipv4、ipv6）
+    type：哪种传输协议
+    udp		SOCK_DGRAM
+    tcp		SOCK_STREAM	
+    protocal：协议（0,默认协议udp）IPPROTO_UDP
+
+2、绑定主机的ip地址和socket（bind）	
+    #include <sys/types.h>
+    #include <sys/socket.h>
+
+    int bind(int sockfd,const struct* addr,socklen_t addrlen)
+    sockfd：套接字的文件描述符
+    addr：主机的ip地址和port端口
+    addlen：地址的大小长度	
+
+3、udp中发送数据（sendto）
+    #include<sys/socket.h>
+
+    ssize_t sendto(int sockfd,const void* message,size_t length,int flag,const struct sockaddr* dest_addr,socklen_t dest_len)
+    sockfd：套接字文件描述符
+    message：发送的信息
+    length：发送数据的大小；注意要用实际长度 strlen();
+    flag：一般置0；
+    dest_addr：对方的ip和port
+    dest_len：对方的地址长度
+
+4、udp中接收数据（recvfrom）
+    创建一个接收的结构体来存储数据
+    struct sockaddr_in recv_addr;
+    int len = sizeof(struct sockaddr_in);
+    char* buffer[256] = {};
+    #include<sys/socket.h>
+
+    ssize_t recvfrom(int sockfd,void* buffer,size_t length,int flag,const struct sockaddr* recv_addr,socklen_t recv_len)
+    sockfd：套接字文件描述符
+    buffer：接收的信息
+    length：接收信息的大小。sizeof(buffer)-1；
+    flag：一般置0；
+    recv_addr：接收端的ip和port
+    recv_len：接收端的地址长度
+
+5、端口号的转换（htons、ntohs）
+    #include <arpa/inet.h>
+    uint16_t htons(uint16_t hostshort)
+    uint16_t ntohs(uint16_t netshort)
+    h：host主机
+    n：network网络
+    s：short端口号
+
+6、地址转换（inet_addr,inet_ntoa）
+    #include <sys/socket.h>
+    #include <netinet/in.h>
+    #include <arpa/inet.h>
+    in_addr_t inet_addr(const char*cp)	将主机的ip地址转为网络ip地址
+    char* inet_ntoa(struct in_addr in)		将网络ip地址转为字符串类型主机ip地址
+
+*/
