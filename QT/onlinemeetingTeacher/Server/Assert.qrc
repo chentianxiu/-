@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/network/configure">
+        <file>configure.json</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,11 @@
+debug/dairy4.o
+debug/jisuanqi.o
+debug/main.o
+debug/quest5.o
+debug/quest6.o
+debug/widget.o
+debug/moc_dairy4.o
+debug/moc_jisuanqi.o
+debug/moc_quest5.o
+debug/moc_quest6.o
+debug/moc_widget.o

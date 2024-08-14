@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>privateChatWidget</class>
+ <widget class="QWidget" name="privateChatWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>758</width>
+    <height>548</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout" stretch="1,10,0,3">
+   <item>
+    <widget class="QLabel" name="friendName">
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QListWidget" name="msgOutput_LW"/>
+   </item>
+   <item alignment="Qt::AlignLeft">
+    <widget class="QPushButton" name="uploadFile_PB">
+     <property name="text">
+      <string>上传文件</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,0">
+     <item>
+      <widget class="QPlainTextEdit" name="msgInput_PTE"/>
+     </item>
+     <item>
+      <widget class="QPushButton" name="send_PB">
+       <property name="text">
+        <string>发送消息</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

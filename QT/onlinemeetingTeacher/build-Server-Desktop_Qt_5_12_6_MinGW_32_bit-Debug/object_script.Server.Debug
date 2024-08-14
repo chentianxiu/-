@@ -1,0 +1,11 @@
+debug/clientsockethandler.o
+debug/dbhelper.o
+debug/main.o
+debug/meetinginfo.o
+debug/messageprotocal.o
+debug/servermananger.o
+debug/widget.o
+debug/qrc_Assert.o
+debug/moc_clientsockethandler.o
+debug/moc_servermananger.o
+debug/moc_widget.o

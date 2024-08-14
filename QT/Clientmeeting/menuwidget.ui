@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>menuwidget</class>
+ <widget class="QWidget" name="menuwidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>678</width>
+    <height>431</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_4" stretch="5,1">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout" stretch="4,10">
+     <item>
+      <widget class="QTabWidget" name="tabWidget">
+       <property name="currentIndex">
+        <number>2</number>
+       </property>
+       <widget class="QWidget" name="tab">
+        <attribute name="title">
+         <string>好友</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QListWidget" name="friendList_LW"/>
+         </item>
+         <item>
+          <widget class="QPushButton" name="addFriend_PB">
+           <property name="text">
+            <string>添加好友</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="tab_2">
+        <attribute name="title">
+         <string>讨论组</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QListWidget" name="groupList_LW"/>
+         </item>
+         <item>
+          <widget class="QPushButton" name="addmeber_PB">
+           <property name="text">
+            <string>添加成员</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="creategroup_PB">
+           <property name="text">
+            <string>创建小组</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="tab_3">
+        <attribute name="title">
+         <string>会议列表</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <widget class="QListWidget" name="meetingList_LW"/>
+         </item>
+         <item>
+          <widget class="QPushButton" name="createMeeting_PB">
+           <property name="text">
+            <string>创建会议</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="frame">
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QTableWidget" name="fileList_TW">
+     <property name="editTriggers">
+      <set>QAbstractItemView::NoEditTriggers</set>
+     </property>
+     <column>
+      <property name="text">
+       <string>发送者</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>接收者</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>文件名</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

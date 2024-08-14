@@ -1,0 +1,10 @@
+debug/client_socket_handler.o
+debug/dbhelper.o
+debug/main.o
+debug/meetinginfo.o
+debug/messageprotocal.o
+debug/servermanager.o
+debug/widget.o
+debug/moc_client_socket_handler.o
+debug/moc_servermanager.o
+debug/moc_widget.o

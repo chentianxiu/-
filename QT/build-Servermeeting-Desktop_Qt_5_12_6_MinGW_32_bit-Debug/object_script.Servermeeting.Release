@@ -1,0 +1,10 @@
+release/client_socket_handler.o
+release/dbhelper.o
+release/main.o
+release/meetinginfo.o
+release/messageprotocal.o
+release/servermanager.o
+release/widget.o
+release/moc_client_socket_handler.o
+release/moc_servermanager.o
+release/moc_widget.o
